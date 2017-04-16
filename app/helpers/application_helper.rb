@@ -16,6 +16,6 @@ module ApplicationHelper
   end
 
   def copyright_generator
-    @copyright = DcamViewTool::Renderer.copyright('Diana Camacho', 'All Rights Reserved')
+    DcamViewTool::Renderer.copyright('Diana Camacho', 'All Rights Reserved')
   end
 end
