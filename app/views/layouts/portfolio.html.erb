@@ -4,20 +4,23 @@
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
     <meta name="keywords" content="<%= @seo_keywords %>" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag    'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
-    <%= login_helper %>
-
-    <%= render "shared/nav", location: "top" %>
-
+    <%= render 'shared/portfolio_nav' %>
+    <%= render 'shared/portfolio_masthead' %>
+    
     <%= yield %>
 
     <%= source_helper("application") %>
+
+    <%= render 'shared/portfolio_footer' %>
   </body>
 </html>
+
+    
+
