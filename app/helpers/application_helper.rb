@@ -14,4 +14,8 @@ module ApplicationHelper
       content_tag(:p, "Thanks for visiting me from #{session[:source]} and you are on #{layout_name} layout", class: "source-greeting")
     end
   end
+
+  def copyright_generator
+    @copyright = DcamViewTool::Renderer.copyright('Diana Camacho', 'All Rights Reserved')
+  end
 end
