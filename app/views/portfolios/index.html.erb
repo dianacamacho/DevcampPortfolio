@@ -1,6 +1,6 @@
 <h1>Portfolio Items</h1>
 
-<%= link_to "Create New Item", new_portfolio_url %>
+<%= link_to "Create New Item", new_portfolio_url if logged_in?(:site_admin) %>
 
 <!-- since model is called Portfolio and we named our var differently than Rails expects with @portfolio_items and not @portfolios, won't work right away. We need to tell rails we changed the conventional naming and tell it what partial to use and what we are using as the collection to iterate over -->
 <%= render partial: 'portfolio_item', collection: @portfolio_items %>
