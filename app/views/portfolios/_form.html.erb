@@ -38,16 +38,18 @@
 
       <div>
         <%= f.fields_for :technologies do |technology_form| %>
-          <div>
-            <%= technology_form.label :name %>
-            <%= technology_form.text_field :name, class: "form-control" %>
-          </div>
+          <%= render 'technology_fields', f: technology_form %>
         <% end %>
+
+        <div>
+          <%= link_to_add_association 'Add Tech', f, :technologies %>
+        </div>
       </div>
+      
       <br>
       <div class="form-group">
-      <%= f.submit "Submit", class: "btn btn-primary btn-block" %>
-    </div>
+        <%= f.submit "Submit", class: "btn btn-primary btn-block" %>
+      </div>
     </div>
   </div>
 <% end %>
