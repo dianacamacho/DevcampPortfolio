@@ -1,6 +1,6 @@
 <div class="album text-muted">
   <div class="container">
-    <div class="row">
+    <div class="row sortable">
       <!-- since model is called Portfolio and we named our var differently than Rails expects with @portfolio_items and not @portfolios, won't work right away. We need to tell rails we changed the conventional naming and tell it what partial to use and what we are using as the collection to iterate over -->
       <%= render partial: 'portfolio_item', collection: @portfolio_items %>
     </div>
