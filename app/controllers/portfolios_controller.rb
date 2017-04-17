@@ -26,7 +26,6 @@ class PortfoliosController < ApplicationController
       if @portfolio_item.save
         format.html { redirect_to portfolios_path, notice: 'Your portfolio item is now live.' }
       else
-        p @portfolio_item.errors.full_messages
         format.html { render :new }
       end
     end
